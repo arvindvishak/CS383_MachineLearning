@@ -31,7 +31,7 @@ standardized_training = (x_values_training - training_mean) / training_sd
 standardized_testing = (x_values_testing - testing_mean) / testing_sd
 
 # padding a column of 1s to the standardized matrices
-ones_training = np.ones((len(standardized_training), 1))
+ones_training = np.ones((len(standardized_training)))
 ones_testing = np.ones((len(standardized_testing), 1))
 
 x_training = np.hstack((ones_training, standardized_training))
